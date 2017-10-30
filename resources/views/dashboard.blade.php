@@ -63,7 +63,19 @@
                         <div class="element-wrapper">
                             <div class="element-box">
                                 @component('componentes.graficas.dona')
-
+                                    @slot('data', [
+                                        [
+                                            'nombre' => __('persona.masculino'),
+                                            'valor' => $estudiantes[1],
+                                            'color' => '#6896f9'
+                                        ],
+                                        [
+                                            'nombre' => __('persona.femenino'),
+                                            'valor' => $estudiantes[0],
+                                            'color' => '#f06292'
+                                        ]
+                                    ])
+                                    @slot('tamano', 130)
                                 @endcomponent
                             </div>
                         </div>
@@ -168,38 +180,8 @@
 @section ('script')
 <script type="text/javascript" src="{!! URL::asset('js/componentes/contador.js') !!}"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
-        if ($('#donutChart').length) {
-            const donutChart = $('#donutChart');
+    /*$(document).ready(function() {
 
-            // donut chart data
-            let data = {
-                labels: ['Masculino', 'Femenino'],
-                datasets: [{
-                    data: [{!! $estudiantes[1] !!}, {!! $estudiantes[0] !!}],
-                    backgroundColor: ['#6896f9', '#f06292'],
-                    hoverBackgroundColor: ['#6896f9', '#f06292'],
-                    borderWidth: 0
-                }]
-            };
-
-            // -----------------
-            // init donut chart
-            // -----------------
-            new Chart(donutChart, {
-                type: 'doughnut',
-                data: data,
-                options: {
-                    legend: {
-                        display: false
-                    },
-                    animation: {
-                        animateScale: false
-                    },
-                    cutoutPercentage: 80
-                }
-            });
-        }
-    });
+    });*/
 </script>
 @endsection

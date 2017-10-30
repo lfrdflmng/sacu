@@ -699,3 +699,31 @@ function inicializarContador($el, val, fuente) {
         });
     }
 }
+
+
+/**
+ * Inicializa la gráfica de tipo Dona
+ *
+ * @param $el
+ * @param data
+ */
+function inicializarGraficaDona($el, data) {
+    if ($el.length) {
+        new Chart($el, {
+            type: 'doughnut',
+            data: data,
+            options: {
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    enabled: false
+                },
+                animation: {
+                    animateScale: false
+                },
+                cutoutPercentage: 80
+            }
+        });
+    }
+}
