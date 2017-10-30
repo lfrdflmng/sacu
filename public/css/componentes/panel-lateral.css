@@ -1,0 +1,140 @@
+.panel-lateral {
+    background-color: #f6f6f6;
+    position: sticky;
+    top: 0;
+}
+
+.panel-lateral .panel-lateral-cabecera {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 16px 20px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.panel-lateral .panel-lateral-cabecera h4 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.panel-lateral .panel-lateral-cabecera .panel-lateral-accion {
+    color: #BC8F8F;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.panel-lateral .panel-lateral-cabecera .panel-lateral-accion i {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    font-size: 10px;
+}
+
+.panel-lateral .panel-lateral-cabecera .panel-lateral-accion > span {
+    display: none;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .7rem;
+}
+
+.panel-lateral .panel-lateral-cabecera .panel-lateral-accion.expandir .btn-expandir {
+    display: inline-block;
+}
+
+.panel-lateral .panel-lateral-cabecera .panel-lateral-accion.colapsar .btn-colapsar {
+    display: inline-block;
+}
+
+.panel-lateral .panel-lateral-seccion {
+    position: relative;
+}
+
+.panel-lateral .panel-lateral-seccion .panel-lateral-alternar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+    padding: 4px 5px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.07);
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 10px;
+    line-height: 1;
+    vertical-align: middle;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.panel-lateral .panel-lateral-seccion .panel-lateral-alternar i {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.panel-lateral .panel-lateral-seccion .panel-lateral-alternar:hover {
+    background-color: #111;
+    color: #fff;
+}
+
+.panel-lateral .panel-lateral-seccion iframe {
+    max-width: 100%;
+}
+
+.panel-lateral .panel-lateral-seccion.no-padding .filter-body {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*.panel-lateral .panel-lateral-seccion.collapsed .filter-body {
+    display: none;
+}*/
+
+.panel-lateral .panel-lateral-seccion-cabecera {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .9rem;
+    position: relative;
+    padding: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.panel-lateral .panel-lateral-seccion-cabecera:before {
+    content: "";
+    background-color: #047bf8;
+    width: 7px;
+    height: 7px;
+    left: 20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.panel-lateral .panel-lateral-contenido {
+    padding: 10px 40px 30px 40px;
+}
+
+.panel-lateral .panel-lateral-seccion+.panel-lateral-seccion {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.panel-lateral.scroll {
+    max-height: 70vh;
+    overflow-y: auto;
+}
